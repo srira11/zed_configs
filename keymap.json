@@ -1,0 +1,31 @@
+[
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-t": "workspace::NewTerminal",
+      "ctrl-c": "terminal::Copy",
+      "ctrl-v": "terminal::Paste",
+      "ctrl-w": ["workspace::SendKeystrokes", "ctrl-shift-w"],
+      "cmd-c": ["terminal::SendKeystroke", "ctrl-c"]
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-backspace": "editor::DeleteToBeginningOfLine",
+      "ctrl-w": "pane::CloseActiveItem"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-alt-c": "project_panel::CollapseAllEntries",
+      "ctrl-p": "file_finder::Toggle"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-shift-t": "task::Spawn",
+      "alt-g": "branches::OpenRecent"
+    }
+  }
+]
