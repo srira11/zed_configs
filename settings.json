@@ -1,0 +1,160 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette
+{
+  "auto_update": false,
+  "code_actions_on_format": {
+    "source.fixAll.eslint": true
+  },
+  "edit_predictions": {
+    "provider": "zed",
+    "mode": "subtle",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null
+    },
+    "enabled_in_text_threads": false
+  },
+  "show_edit_predictions": false,
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Colored Zed Icons Theme Dark",
+    "dark": "Colored Zed Icons Theme Dark"
+  },
+  "agent": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-opus-4.5"
+    },
+    "default_profile": "ask",
+    "model_parameters": [],
+    "profiles": {
+      "ask": {
+        "name": "Ask",
+        "tools": {
+          "diagnostics": true,
+          "fetch": true,
+          "list_directory": true,
+          "project_notifications": false,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "open": true,
+          "grep": true,
+          "subagent": true,
+          "thinking": true,
+          "web_search": true
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {
+          "atlassian-mcp-server": {
+            "tools": {
+              "updateConfluencePage": true,
+              "transitionJiraIssue": true,
+              "searchJiraIssuesUsingJql": true,
+              "searchConfluenceUsingCql": true,
+              "search": true,
+              "lookupJiraAccountId": true,
+              "getVisibleJiraProjects": true,
+              "getTransitionsForJiraIssue": true,
+              "getJiraProjectIssueTypesMetadata": true,
+              "getPagesInConfluenceSpace": true,
+              "getJiraIssueTypeMetaWithFields": true,
+              "getJiraIssueRemoteIssueLinks": true,
+              "getJiraIssue": true,
+              "getConfluenceSpaces": true,
+              "getConfluencePageInlineComments": true,
+              "getConfluencePageFooterComments": true,
+              "getConfluencePageDescendants": true,
+              "getConfluencePage": true,
+              "getAccessibleAtlassianResources": true,
+              "fetch": true,
+              "editJiraIssue": true,
+              "createJiraIssue": true,
+              "createConfluencePage": true,
+              "createConfluenceInlineComment": true,
+              "createConfluenceFooterComment": true,
+              "atlassianUserInfo": true,
+              "addWorklogToJiraIssue": true,
+              "addCommentToJiraIssue": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "buffer_font_family": "Monaco",
+  "ui_font_family": "Monaco",
+  "base_keymap": "JetBrains",
+  "languages": {
+    "TSX": {
+      "show_edit_predictions": false
+    },
+    "Groovy": {
+      "show_edit_predictions": false
+    },
+    "TypeScript": {
+      "show_edit_predictions": false
+    },
+    "Vue.js": {
+      "show_edit_predictions": false
+    },
+    "Ruby": {
+      "language_servers": ["ruby-lsp", "rubocop", "!solargraph", "..."]
+    }
+  },
+  "lsp": {
+    "ruby-lsp": {
+      "settings": {
+        "use_bundler": false
+      },
+      "environment": {
+        "DEPENDENCIES_NEXT": "1"
+      }
+    },
+    "solargraph": {
+      "settings": {
+        "use_bundler": false
+      }
+    },
+    "rubocop": {
+      "settings": {
+        "use_bundler": false
+      }
+    }
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "GitHub Dark",
+    "dark": "GitHub Dark"
+  },
+  "autosave": "on_focus_change",
+  "format_on_save": "on",
+  "formatter": [],
+  "tab_size": 2,
+  "vim_mode": false,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 13,
+  "context_servers": {
+    "atlassian-mcp-server": {
+      "env": {},
+      "enabled": true,
+      "remote": false,
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://mcp.atlassian.com/v1/mcp"
+      ]
+    }
+  }
+}
