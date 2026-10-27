@@ -1,3 +1,33 @@
+// Some example tasks for common languages.
+//
+// For more documentation on how to configure debug tasks,
+// see: https://zed.dev/docs/debugger
+[
+  {
+    "label": "Debug active Python file",
+    "adapter": "Debugpy",
+    "program": "$ZED_FILE",
+    "request": "launch",
+    "cwd": "$ZED_WORKTREE_ROOT"
+  },
+  {
+    "label": "Debug active JavaScript file",
+    "adapter": "JavaScript",
+    "program": "$ZED_FILE",
+    "request": "launch",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "type": "pwa-node"
+  },
+  {
+    "label": "JavaScript debug terminal",
+    "adapter": "JavaScript",
+    "request": "launch",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "console": "integratedTerminal",
+    "type": "pwa-node"
+  }
+]
+sriram.v@RENTLY-CBE179:~/.config/zed$ cat keymap.json
 [
   {
     "context": "Terminal",
@@ -25,7 +55,73 @@
   {
     "bindings": {
       "ctrl-shift-t": "task::Spawn",
-      "alt-g": "branches::OpenRecent"
+      "ctrl-shift-g": "git::Branch"
+    }
+  },
+  {
+    "bindings": {
+      "alt-t": "terminal_panel::Toggle"
+    }
+  },
+  {
+    "context": "Workspace || Editor",
+    "unbind": {
+      "alt-f12": "terminal_panel::Toggle"
+    }
+  },
+  {
+    "bindings": {
+      "alt-g": "git_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "alt-0": "git_panel::ToggleFocus"
+    }
+  },
+  {
+    "bindings": {
+      "alt-b": "agent::ToggleFocus"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-?": "agent::ToggleFocus"
+    }
+  },
+  {
+    "bindings": {
+      "alt-v": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-alt-b": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "bindings": {
+      "alt-c": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-b": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "bindings": {
+      "alt-f": "project_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "alt-1": "project_panel::ToggleFocus"
     }
   }
 ]
